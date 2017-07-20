@@ -1,28 +1,55 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
+  Semantic HTML are HTML elements that give more meaning to an element. Examples would include using
+  <nav> or <main> rather than just a <div>
 
 2. What is the box model?
+  The box model is a visual layout of how an HTML Element sits on a page. It consists of Padding, Border, and Margin.
+  Padding- the amount of 'inside' space between the border of an element and the content of the element.
+  Border- the space immediately surrounding the element.
+  Margin- the amount of space between the element and another html element on the page.
 
 3. What is the difference between IDs and Classes?
+    IDs and Classes are both used to identify HTML Elements. IDs are meant to be more specific than classes.
+    It is best practice to only use and ID once whereas Classes should be used multiple times when possible to prevent repetition in CSS.
+    IDs will also take precedence over Classes in when CSS is compiling.
 
 4. What does the z-index do?
+    Z-index moves elements along the 'z-axis' on the computer. The higher the z-index,
+    the higher that element will be above the other elements on the page.
 
 5. Summarize what the keyword 'this' is used for?
+    'This' is used to give context to a function or event.
 
 6. What is a callback?
+    A call back is a function inside of a function. It is passed to another function
+    as a parameter allowing it to be called when a certain event happens.
 
 7. What is a closure?
-
+    A closure allows a function to retain the scope of its parent function even
+    after the parent function has been evoked and goes away.
 8. How does prototype work?
-
+    A prototype sets up a class or an object or a function as a template to be used
+    by other classes with similar properties. Sort of like classes in react.
 9. What is MVC?
-
+    An MVC(or model-view controller, I believe), is a way to pass information between
+    an application. The controller acts as an intermediary and passes information to
+    the client view as necessary.
 10. What is the component lifecycle?
-
+    I am not exactly sure as to what the exact life cycle of the component entails,
+    but I do know that, in React, there are certain functions that you can run to
+    either get an update on if the component has mounted or received props, and you can also inject
+    other functions(1) into these lifecycle functions(2) so that so that 1 will only fire off after
+    (2) has happened.
 11. What is REST?
-
+  REST or Representational State Transfer is a way to allow computers to interact
+  with data on the internet. I am not too sure about to exact interworkings of it, but
+  I know it allows us to make CRUD HTTP requests.
 12. Name three ways of getting data from the URL using express
+  There are really only two that come to mind, or at least two that I have ever used.
+  Those are req.params, usually used during a DELETE or a PUT, and req.body via body-parser
+  which is usually used during a POST request
 
 create table users (
 id serial,
@@ -33,9 +60,11 @@ email varchar(255)
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
+  SELECT * FROM users;
 
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
-
+  INSERT INTO users (name, email) VALUES (your name, fake@fake.com);
 -Update the newly created user's name to 'Bobby Boy':
-
+  UPDATE users SET name = Bobby Boy WHERE id = 1;
 -Delete the newly updated user:
+  DELETE FROM users WHERE id = 1;;
